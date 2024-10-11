@@ -43,22 +43,50 @@ def intro():
 
 def proyecto_crimenML():
 
-    st.subheader("Proyectos")
+    st.header("¿Y si el COVID-19 no hubiera existido? Predicción de la criminalidad en España en los ultimos años utilizando Deep Learning")
     
-    st.markdown("""
-    ### Predicción de Ventas
-    He desarrollado modelos de Deep Learning para predecir ventas futuras utilizando técnicas como Random Forest, XGBoost y Prophet. 
-    Aquí puedes ver algunos de mis resultados:
-    
-    ### Análisis de Criminalidad en España
-    Un análisis detallado de cómo la criminalidad ha evolucionado en España a lo largo de los años, utilizando Deep Learning para predecir tendencias futuras.
-    - [Repositorio en GitHub](https://github.com/tuusuario/tu-repositorio)
-    - [Aplicación de Streamlit](https://tu-streamlit-app.com)
+    st.markdown("""    
+    ### Análisis de Criminalidad en España""")
+    st.image("data/imagen_proyecto_deep_learning_ironhack.png", width=500)
+
+    st.markdown(""" El objetivo de este proyecto partió de una idea: ¿Y si el COVID-19 no hubiera existido?. Todos sabemos que en 2020 la criminalidad bajó a minimos en gran parte del mundo debido 
+    a la pandemia. Sin embargo, ¿que pasaría si entrenasemos un modelo de inteligencia artificial hasta 2019 y le hiciesemos predecir los resultados de 2020? Los resultados que obtuvimos
+    fueron más que sorprendentes.  
+    A continuación están los links del repositorio y de la web creada a modo de presentación para el proyecto.
+    - [Repositorio en GitHub](https://github.com/ivanalonsom/Project6_Predict_Criminality_Using_ML)
+    - [Aplicación de Streamlit](https://deep-learning-spain-crimen-study.streamlit.app/)
     """)
 
+def proyecto_abtest():
+
+    st.header("Realización de A-B Testing mediante Análisis Exploratorio de Datos ")
+
+    st.markdown(""" En este proyecto partiamos de una serie de datos obtenidos durante un experimento de A-B Testing. Este consistió en realizar una recogida de datos de usuarios de una 
+    misma página web durante varios meses, con la única diferencia de que algunos usuarios veían la web original (de control) y otros la nueva web (test). El objetivo del proyecto 
+    consistió en limpiar, analizar y mostrar las conclusiones a las que llegamos a partir de los datos obtenidos""")
+    st.markdown("""Para este paso de mostrar los resultados nos valimos de PowerBi y Tableau. A continuación están los links del repositorio y de Tableau además 
+                de una demostración del PowerBI realizado.  
+    - [Repositorio en GitHub](https://github.com/ivanalonsom/Project_A-B_Testing_Based_On_EDA)  
+    - [Aplicación de Tableau](https://public.tableau.com/app/profile/iv.n.alonso8801/viz/ABTesting_Project_Clients_Analysis/Clientinsights)""")
+    st.video("https://www.youtube.com/watch?v=risEWolXBHs")
+
+
+def proyecto_ventas_sql():
+
+    st.header("Proyecto SQL")
+
+    st.markdown(""" En este proyecto se obtuvieron """)
+
+def contacto():
+    st.subheader("Contacto")
+    st.markdown("""
+    - **Nombre:** Iván Alonso
+    - **Email:** ivan7yt@gmail.com
+    - **LinkedIn:** [Perfil Iván Alonso](https://www.linkedin.com/in/tuperfil)
+    """)
 
 # Selector de página
-page = st.sidebar.selectbox("Selecciona una página", ["Introducción", "Proyecto Machine Learning", "Análisis de Datos", "Contacto"])
+page = st.sidebar.selectbox("Selecciona una página", ["Introducción", "Proyecto Machine Learning", "Proyecto A-B Testing", "Proyecto SQL", "Contacto"])
 st.sidebar.markdown("<br>" * 23, unsafe_allow_html=True)
 st.sidebar.markdown("""  
                 ### Github - https://github.com/ivanalonsom  
@@ -72,63 +100,14 @@ if page == "Introducción":
 elif page == "Proyecto Machine Learning":
     proyecto_crimenML()
 
-# Página de Análisis de Datos
-elif page == "Análisis de Datos":
-    st.subheader("Análisis de Datos")
-    
-    # Cargar datos
-    @st.cache
-    def load_data():
-        df = pd.read_csv("https://raw.githubusercontent.com/data-bootcamp-v4/data/main/sales.csv")
-        df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
-        return df
 
-    df = load_data()
+elif page == "Proyecto A-B Testing":
+    proyecto_abtest()
     
-    # Mostrar los datos
-    st.subheader("Conjunto de Datos")
-    st.dataframe(df.head())
-    
-    # Selección de tienda
-    store_ids = df['Store_ID'].unique()
-    selected_store = st.selectbox("Selecciona una tienda para analizar", store_ids)
-    
-    # Filtrar datos por tienda seleccionada
-    df_store = df[df['Store_ID'] == selected_store]
-    
-    # Visualización de ventas
-    st.subheader(f"Ventas de la Tienda {selected_store} a lo largo del tiempo")
-    fig, ax = plt.subplots(figsize=(10, 5))
-    sns.lineplot(data=df_store, x='Date', y='Sales', ax=ax)
-    plt.title(f"Ventas de la Tienda {selected_store}")
-    plt.xlabel("Fecha")
-    plt.ylabel("Ventas")
-    st.pyplot(fig)
-    
-    # Análisis de correlación
-    st.subheader("Análisis de Correlación")
-    correlation = df.corr()
-    fig, ax = plt.subplots(figsize=(10, 8))
-    sns.heatmap(correlation, annot=True, cmap='coolwarm', ax=ax)
-    plt.title("Mapa de Calor de Correlaciones")
-    st.pyplot(fig)
-    
-    # Análisis de ventas por día de la semana
-    st.subheader("Ventas por Día de la Semana")
-    fig, ax = plt.subplots(figsize=(10, 5))
-    sns.boxplot(data=df_store, x='Day_of_week', y='Sales', ax=ax)
-    plt.title(f"Ventas de la Tienda {selected_store} por Día de la Semana")
-    plt.xlabel("Día de la Semana")
-    plt.ylabel("Ventas")
-    st.pyplot(fig)
+elif page == "Proyecto SQL":
+    proyecto_ventas_sql()
 
-# Página de Contacto
 elif page == "Contacto":
-    st.subheader("Contacto")
-    st.markdown("""
-    - **Nombre:** Tu Nombre
-    - **Email:** tuemail@ejemplo.com
-    - **LinkedIn:** [Tu Perfil](https://www.linkedin.com/in/tuperfil)
-    """)
+    contacto()
 
 
