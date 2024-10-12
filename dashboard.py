@@ -13,10 +13,12 @@ def intro():
         col1, col2 = st.columns([2,1])
         with col1:
             st.markdown("""
+    <div style="text-align: justify;">
         ¡Bienvenido a mi portfolio de analista de datos! Soy un analista de datos apasionado y comprometido con un sólido conocimiento en el análisis y visualización de datos. 
                                 A lo largo de mi carrera, he desarrollado y perfeccionado habilidades en diversas herramientas y técnicas que me permiten transformar datos complejos 
                                 en información valiosa y comprensible.
-        """)
+        </div>
+    """, unsafe_allow_html=True)
         with col2:
             st.image("https://avatars.githubusercontent.com/u/160544813?v=4", width=200)
 
