@@ -47,27 +47,40 @@ def proyecto_crimenML():
     
     st.markdown("""    
     ### Análisis de Criminalidad en España""")
+    
     st.image("data/imagen_proyecto_deep_learning_ironhack.png", width=500)
 
-    st.markdown(""" El objetivo de este proyecto partió de una idea: ¿Y si el COVID-19 no hubiera existido?. Todos sabemos que en 2020 la criminalidad bajó a minimos en gran parte del mundo debido 
+    st.markdown(""" 
+    <p style="text-align: justify;">
+    El objetivo de este proyecto partió de una idea: ¿Y si el COVID-19 no hubiera existido?. Todos sabemos que en 2020 la criminalidad bajó a minimos en gran parte del mundo debido 
     a la pandemia. Sin embargo, ¿que pasaría si entrenasemos un modelo de inteligencia artificial hasta 2019 y le hiciesemos predecir los resultados de 2020? Los resultados que obtuvimos
-    fueron más que sorprendentes.  
-    A continuación están los links del repositorio y de la web creada a modo de presentación para el proyecto.
-    - [Repositorio en GitHub](https://github.com/ivanalonsom/Project6_Predict_Criminality_Using_ML)
-    - [Aplicación de Streamlit](https://deep-learning-spain-crimen-study.streamlit.app/)
-    """)
+    fueron más que sorprendentes.  </br>
+    A continuación están los links del repositorio y de la web creada a modo de presentación para el proyecto.</br>
+    </p>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    - [Repositorio en GitHub](https://github.com/ivanalonsom/Project6_Predict_Criminality_Using_ML)  
+    - [Aplicación de Streamlit](https://deep-learning-spain-crimen-study.streamlit.app/)""")
 
 def proyecto_abtest():
 
     st.header("Realización de A-B Testing mediante Análisis Exploratorio de Datos ")
 
-    st.markdown(""" En este proyecto partiamos de una serie de datos obtenidos durante un experimento de A-B Testing. Este consistió en realizar una recogida de datos de usuarios de una 
-    misma página web durante varios meses, con la única diferencia de que algunos usuarios veían la web original (de control) y otros la nueva web (test). El objetivo del proyecto 
-    consistió en limpiar, analizar y mostrar las conclusiones a las que llegamos a partir de los datos obtenidos""")
-    st.markdown("""Para este paso de mostrar los resultados nos valimos de PowerBi y Tableau. A continuación están los links del repositorio y de Tableau además 
-                de una demostración del PowerBI realizado.  
+    st.markdown(""" 
+    <p style="text-align: justify;">
+    En este proyecto partiamos de una serie de datos obtenidos durante un experimento de A-B Testing. Este consistió en realizar una recogida de datos de usuarios de una 
+    misma página web durante varios meses, con la única diferencia de que algunos usuarios veían la web original (de control) y otros la nueva web (test). </br>
+    El objetivo del proyecto consistió en limpiar, analizar y mostrar las conclusiones a las que llegamos a partir de los datos obtenidos.  </br>
+    Para este paso de mostrar los resultados nos valimos de PowerBi y Tableau. 
+    A continuación están los links del repositorio y de Tableau, además de una demostración del PowerBI realizado.  
+    </p>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
     - [Repositorio en GitHub](https://github.com/ivanalonsom/Project_A-B_Testing_Based_On_EDA)  
     - [Aplicación de Tableau](https://public.tableau.com/app/profile/iv.n.alonso8801/viz/ABTesting_Project_Clients_Analysis/Clientinsights)""")
+
     st.video("https://www.youtube.com/watch?v=risEWolXBHs")
 
 
@@ -75,7 +88,22 @@ def proyecto_ventas_sql():
 
     st.header("Proyecto SQL")
 
-    st.markdown(""" En este proyecto se obtuvieron """)
+    st.markdown(""" 
+    <p style="text-align: justify;">
+    En este proyecto se obtuvieron datos de videojuegos en diferentes tiendas de *claves* y de tiendas oficiales mediante el manejo de diversas APIs. </br>
+    Los datos obtenidos, entre los que destaca el precio,se limpiaron y trataron para su posterior utilización almacenándolos en una base de datos SQL, ofreciendo así una ventaja doble: </br>
+    <ol> 
+        <li> Poder obtener y filtrar los precios más baratos de cada videojuego y donde adquirirlo en apenas dos clicks con el programa desarrollado en Python. </li>
+        <li> Podemos analizar las tendencias de mercado que, gracias al almacenamiento en la base de datos que creé para la tarea, cada vez ofrezca más información. Podemos también filtrar con las querys que necesitemos. </li>
+    </ol>
+    </p>""", unsafe_allow_html=True)
+    
+    st.image("data/relational_sql_ironhack.png")
+
+    st.markdown(""" A continuación estan los links del repositorio y de la web creada a modo de presentación para el proyecto.
+    - [Repositorio en GitHub](https://github.com/ivanalonsom/Project4_DataAnalysis_Sales_SQL)  
+    - [Demo de Streamlit](https://project4-sql-data-oriented-to-sales.streamlit.app/)""")
+
 
 def contacto():
     st.subheader("Contacto")
