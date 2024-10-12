@@ -30,7 +30,7 @@ def intro():
 
     * **Lenguaje de programación principal**: Utilizo `Python` como mi lenguaje principal de programación debido a su versatilidad y potencia.
     * **Manipulación y análisis de datos**: Con bibliotecas como `pandas`, puedo realizar manipulación y análisis de datos de manera eficiente.
-    * **Visualización de datos**:  `Matplotlib` y `seaborn` me resultan muy para la visualización de datos, permitiéndome crear gráficos claros y persuasivos que comunican las historias detrás de los datos.
+    * **Visualización de datos**:  `Matplotlib` y `seaborn` me resultan muy útiles para la visualización de datos, permitiéndome crear gráficos claros y persuasivos que comunican las historias detrás de los datos.
     * **Machine Learning**: Tengo nociones de Machine y Deep Learning, las cuales he podido poner a prueba con técnicas como Random Forest, Bagging y Prophet he podido desarrollar modelos predictivos robustos. 
 
     *Mi objetivo es siempre encontrar patrones ocultos y proporcionar insights que impulsen la toma de decisiones estratégicas.*
