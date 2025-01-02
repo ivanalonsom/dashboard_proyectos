@@ -38,28 +38,9 @@ def intro():
     </div>
     """, unsafe_allow_html=True)
 
-<<<<<<< Updated upstream
-    st.markdown("""
-<div style="text-align: justify;">
-En este portfolio, presento algunos de los proyectos que he realizado, destacando mi capacidad para abordar problemas complejos y proporcionar soluciones basadas en datos </div>
-    """, unsafe_allow_html=True) 
-
-    st.markdown("""
-<div style="text-align: justify;">
-Si estás interesado en colaborar en proyectos relacionados con el análisis de datos, machine learning o cualquier otro ámbito de la ciencia de datos, no dudes en contactarme.  Estoy siempre en busca de nuevas oportunidades para aplicar mis habilidades y aprender algo nuevo.
-</div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-<div style="text-align: justify;"> 
-**Gracias por visitar mi portfolio**, espero que disfrutes explorando mis proyectos tanto como yo disfruté trabajándo en ellos.
-</div>
-    """, unsafe_allow_html=True)
-=======
     st.markdown("En este portfolio, presento algunos de los proyectos que he realizado, destacando mi capacidad para abordar problemas complejos y proporcionar soluciones basadas en datos.")
     st.write("Si estás interesado en colaborar en proyectos relacionados con el análisis de datos, machine learning o cualquier otro ámbito de la ciencia de datos, no dudes en contactarme.  Estoy siempre en busca de nuevas oportunidades para aplicar mis habilidades y aprender algo nuevo.")
     st.write("**Gracias por visitar mi portfolio** , espero que disfrutes explorando mis proyectos tanto como yo disfruté trabajándolos.")
->>>>>>> Stashed changes
 
 
 def proyecto_crimenML():
